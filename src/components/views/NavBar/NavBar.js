@@ -1,4 +1,5 @@
-import { Navbar, NavLink, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -7,7 +8,7 @@ const NavBar = () => {
             <Container>
                 <Navbar.Brand>Waiter.app</Navbar.Brand>
                 <Nav >
-                    <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
