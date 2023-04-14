@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
     const tables = useSelector(getAllTables);
 
-    console.log(tables);
-
     if (tables.length === 0) {
         return (
             <Spinner animation="border" role="status" size="sm">
