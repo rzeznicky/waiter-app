@@ -14,7 +14,7 @@ const Table = () => {
     const [maxPeopleAmount, setMaxPeopleAmount] = useState(selectedTable.maxPeopleAmount);
     const [bill, setBill] = useState(selectedTable.bill);
 
-    const statusList = ["Free", "Busy", "Reserved", "Cleaning"];
+    const statusOptions = ["Free", "Busy", "Reserved", "Cleaning"];
 
     return (
         <Form>
@@ -26,7 +26,7 @@ const Table = () => {
                     <Form.Select
                         value={status}
                         onChange={e => setStatus(e.target.value)}>
-                        {statusList.map(status => <option key={shortid()}>{status}</option>)}
+                        {statusOptions.map(status => <option key={shortid()}>{status}</option>)}
                     </Form.Select>
                 </Col>
             </Form.Group>
@@ -56,7 +56,7 @@ const Table = () => {
                 </Stack>
             </Form.Group>
 
-            <Form.Group as={Row} controlId="bill" className="px-0 py-2">
+            <Form.Group as={Row} controlId="bill" className={status !== "Busy" ? "d-none" : "px-0 py-2"}>
                 <Stack direction="horizontal">
                     <Form.Label column xs={2} className="fw-bold">Bill:</Form.Label>
                     <span className="mx-1">$</span>
