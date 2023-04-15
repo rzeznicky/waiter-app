@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <ListGroup>
-            <h1 className="my-4">All tables</h1>
+            <h1 className="my-3">All tables</h1>
             {tables.map(table => <ListGroupItem className="px-0 py-3" key={table.id} >
                 <Stack direction="horizontal">
                     <h3 className="me-4">Table {table.id}</h3>
